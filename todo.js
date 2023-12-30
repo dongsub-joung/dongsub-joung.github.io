@@ -32,7 +32,7 @@ function addTasking() {
 
 
 async function addComment(commentText) {
-  await fetch('https://todo.ngrok.app/todo/add', {
+  await fetch(' https://myapp-api.ngrok.dev/todo/add', {
     method: 'POST',
     body: JSON.stringify({ 'todo': commentText })
   })
@@ -41,13 +41,13 @@ async function addComment(commentText) {
 }
 
 async function removeFromDb(text){
-  await fetch('https://todo.ngrok.app/todo/remove')
+  await fetch(' https://myapp-api.ngrok.dev/todo/remove')
     .then(/* Handle response */)
     .catch(/* Handle errors */);
 }
 
 async function listUpTodos(){
-  await fetch('https://todo.ngrok.app/todos')
+  await fetch('https://myapp-api.ngrok.dev/todos')
   .then((response) => {
     return response.json()
   })

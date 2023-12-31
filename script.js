@@ -25,7 +25,7 @@ async function getListing(response){
     });
 }
 
-let response_comment= fetch('https://myapp-api.ngrok.dev/comment/all');
+let response_comment= fetch('https://13.237.248.97:7080/comment/all');
 const commentsLists = getListing(response_comment);
 
 
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     async function addComment(commentText) {
-        await fetch('https://myapp-api.ngrok.dev/comment/add', {
+        await fetch('https://13.237.248.97:7080/comment/add', {
             method: 'POST',
             body: JSON.stringify({ 'body': commentText  })
         })
@@ -83,7 +83,7 @@ function addTasking() {
 }
 
 async function addComment(commentText) {
-  await fetch('https://todo.ngrok.app/todo/add', {
+  await fetch('https://13.237.248.97:7080/todo/add', {
     method: 'POST',
     body: JSON.stringify({ 'todo': commentText })
   })
@@ -93,7 +93,7 @@ async function addComment(commentText) {
 
 async function removeFromDb(_id) {
   try {
-    const response = await fetch(`https://todo.ngrok.app/todo/remove/${_id}`);
+    const response = await fetch(`https://13.237.248.97:7080/todo/remove/${_id}`);
     if (response.ok) {
       // Handle successful response
       console.log('Successfully removed from the database.');
@@ -109,7 +109,7 @@ async function removeFromDb(_id) {
 }
 
 async function listUpTodos(){
-  await fetch('https://todo.ngrok.app/todos')
+  await fetch('https://13.237.248.97:7080//todos')
   .then((response) => {
     return response.json()
   })

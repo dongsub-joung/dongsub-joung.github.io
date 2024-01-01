@@ -25,7 +25,7 @@ async function getListing(response){
     });
 }
 
-let response_comment= fetch('http://somebodyhelpmeplz.n-e.kr/comment/all');
+let response_comment= fetch('https://somebodyhelpmeplz.n-e.kr/comment/all');
 const commentsLists = getListing(response_comment);
 
 

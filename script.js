@@ -12,9 +12,9 @@ async function getListing(response){
     .then((response) => response.json())
     .then((lists) => {
         // console.log(lists);
-        console.log(lists.length);
+        // console.log(lists.length);
         for(i=0; i<lists.length; i++){
-            console.log(lists[i].in_body);
+            // console.log(lists[i].in_body);
             let body= lists[i].in_body;
                         let frist= body.indexOf('body');
             let result_string= body.substr(frist+7);

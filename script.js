@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     async function addComment(commentText) {
-        await fetch('https://somebodyhelpmeplz.n-e.kr:8080/comment/add', {
+        await fetch('http://somebodyhelpmeplz.n-e.kr:8080/comment/add', {
             method: 'POST',
             body: JSON.stringify({ 'body': commentText  })
         })

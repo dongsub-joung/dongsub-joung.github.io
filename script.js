@@ -25,7 +25,21 @@ async function getListing(response){
     });
 }
 
-let response_comment= fetch('https://meet-lioness-brave.ngrok-free.app/comment/all');
+let response_comment= fetch('https://meet-lioness-brave.ngrok-free.app/comment/all')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json(); // Parse the JSON data
+  })
+  .then(data => {
+    console.log(data); // Handle the response data
+  })
+  .catch(error => {
+    console.error('There was a problem with the fetch operation:', error);
+  });
+
+// let response_comment= fetch('https://meet-lioness-brave.ngrok-free.app/comment/all');
 const commentsLists = getListing(response_comment);
 
 

@@ -25,7 +25,7 @@ async function getListing(response){
     });
 }
 
-let response_comment= fetch('https://meet-lioness-brave.ngrok-free.app/comment/all')
+let commentsLists= fetch('https://meet-lioness-brave.ngrok-free.app/comment/all')
   .then(response => {
     if (!response.ok) {
       throw new Error('Network response was not ok');
@@ -40,7 +40,7 @@ let response_comment= fetch('https://meet-lioness-brave.ngrok-free.app/comment/a
   });
 
 // let response_comment= fetch('https://meet-lioness-brave.ngrok-free.app/comment/all');
-const commentsLists = getListing(response_comment);
+// const commentsLists = getListing(response_comment);
 
 
 for(i=0; i<commentsLists.lenght; i++){

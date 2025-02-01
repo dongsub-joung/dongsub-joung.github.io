@@ -25,7 +25,7 @@ async function getListing(response){
     });
 }
 
-let response_comment= fetch('https://somebodyhelpmeplz.n-e.kr/comment/all');
+let response_comment= fetch('https://meet-lioness-brave.ngrok-free.app/comment/all');
 const commentsLists = getListing(response_comment);
 
 
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     async function addComment(commentText) {
-        await fetch('https://somebodyhelpmeplz.n-e.kr/comment/add', {
+        await fetch('https://meet-lioness-brave.ngrok-free.app/comment/add', {
             method: 'POST',
             body: JSON.stringify({ 'body': commentText  })
         })

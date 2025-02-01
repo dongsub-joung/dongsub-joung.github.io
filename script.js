@@ -33,7 +33,7 @@ for(i=0; i<commentsLists.lenght; i++){
     let body= commentsLists.in_body;
     let frist= body.indexOf('body');
     let last= body.lastIndexOf('WebKitFormBoundary');
-    // let result_string= body.substr(first+9, last-10);
+    let result_string= body.substr(first+9, last-10);
     // showComment(result_string);
     document.getElementById('commentsList').textContent = result_string;
     // showComment(body)

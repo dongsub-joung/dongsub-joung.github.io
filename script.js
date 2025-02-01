@@ -35,8 +35,11 @@ for(i=0; i<commentsLists.lenght; i++){
     let last= body.lastIndexOf('WebKitFormBoundary');
     let result_string= body.substr(first+9, last-10);
     // showComment(result_string);
-    document.getElementById('commentsList').textContent = result_string;
-    // showComment(body)
+
+    const comment = document.createElement("div");
+    comment.classList.add("comment");
+    const paragraph = document.createElement("p");
+    paragraph.textContent = result_string;
 }
 
 document.addEventListener("DOMContentLoaded", function () {
